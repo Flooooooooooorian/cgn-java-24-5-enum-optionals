@@ -3,7 +3,7 @@ public enum OrderStatus {
     IN_DELIVERY("D"),
     COMPLETED("C");
 
-    private String abbreviation;
+    private final String abbreviation;
 
     OrderStatus(String abbreviation) {
         this.abbreviation = abbreviation;
