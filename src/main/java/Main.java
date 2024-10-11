@@ -23,6 +23,7 @@ public class Main {
 
         Optional<Product> optionalProduct1 = productRepo.getProductById("1");
 
+        //unsafe
         System.out.println(optionalProduct1.get().name());
 
         if (optionalProduct1.isPresent()) {
@@ -31,13 +32,9 @@ public class Main {
             System.out.println("Produkt nicht gefunden!");
         }
 
+        //unsafe
 //        Product product2 = productRepo.getProductById("2");
-//        if (product2 != null) {
-//            System.out.println(product2.name());
-//        } else {
-//            System.out.println("Produkt nicht gefunden!");
-//        }
-
+//        System.out.println(product2.name());
 
         Optional<Order> optionalOrder = Optional.ofNullable(null);
 
